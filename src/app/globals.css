@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfcfd;
+  --foreground: #16181c;
+  --snow: #fbfcfd;
+  --ink: #16181c;
+  --mute: #5c6570;
+  --line: #e6eaee;
+  --wash: #f3f5f7;
+  --mark: #1e3a34;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-snow: var(--snow);
+  --color-ink: var(--ink);
+  --color-mute: var(--mute);
+  --color-line: var(--line);
+  --color-wash: var(--wash);
+  --color-mark: var(--mark);
+  --font-sans: var(--font-sans-src);
+  --font-display: var(--font-display-src);
+}
+
+html {
+  background: var(--snow);
+  color: var(--ink);
+  scroll-padding-top: 6rem;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: var(--snow);
+  color: var(--ink);
+  font-family: var(--font-sans-src), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgb(30 58 52 / 0.16);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+footer :focus-visible {
+  outline-color: var(--snow);
+}
+
+footer ::selection {
+  background: rgb(251 252 253 / 0.22);
+  color: var(--snow);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1.25rem;
+  top: -3.5rem;
+  z-index: 80;
+  background: var(--ink);
+  color: var(--snow);
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link[aria-current="page"]::after,
+.nav-link[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
+  color: var(--snow);
+  padding: 0.9rem 1.7rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: #0c0d0f;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  background: #000;
+}
+
+.btn-primary:disabled {
+  opacity: 0.55;
+  transform: none;
+}
+
+input,
+select,
+textarea {
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .nav-link::after {
+    transition: none;
+  }
+}
