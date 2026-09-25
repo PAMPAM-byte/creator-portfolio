@@ -33,7 +33,7 @@ const socials = [
     href: "https://www.instagram.com/pamilhereen",
     Icon: InstagramIcon,
   },
-  { name: "WhatsApp", href: "https://wa.me/2347050850039", Icon: WhatsAppIcon },
+  { name: "WhatsApp", href: "https://wa.me/2347050830039", Icon: WhatsAppIcon },
 ];
 
 export default function Contact() {

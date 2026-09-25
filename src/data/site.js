@@ -38,7 +38,7 @@ export const site = {
   email: "your-email@example.com",
   phoneDisplay: "+234 800 000 0000",
   phoneHref: "tel:+2348000000000",
-  whatsappNumber: "2348000000000",
+  whatsappNumber: "2347050830039",
   whatsappMessage:
     "Hi Favour, I would like to talk about a video project.",
 
