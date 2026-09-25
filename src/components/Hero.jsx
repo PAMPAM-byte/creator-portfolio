@@ -35,7 +35,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.16, ease }}
           >
             {site.role}
-          </motion.p>
+          </motion.p>  
 
           <motion.p
             className="mt-8 max-w-xl text-lg leading-8 text-mute"
@@ -43,7 +43,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.24, ease }}
           >
-            {site.tagline}
+            {site.tagline} 
           </motion.p>
 
           <motion.div

@@ -162,7 +162,8 @@ export const projects = [
       { label: "Project Type", value: "Product-Update Promotion" },
       { label: "Website", value: "nannoy.com", href: "https://nannoy.com" },
     ],
-    videoUrl: "/images/cinematic%20announcement-nannoy.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790291695/Cinematic_Announcement-Nannoy_compressed_br5ksb.mp4",
     isPlaceholder: false,
   },
   {
