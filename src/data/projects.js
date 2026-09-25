@@ -41,7 +41,8 @@ export const projects = [
       { label: "Project Type", value: "Original AI Food-Content Series" },
       { label: "Tools", value: "Google Flow, CapCut" },
     ],
-    videoUrl: "/images/chef-jollof.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290458/Chef_Pampam_compressed_xvc6vj.mp4",
     isPlaceholder: false,
   },
   {
@@ -64,7 +65,8 @@ export const projects = [
       { label: "Project Type", value: "Independent Healthcare UGC Concept" },
       { label: "Tools", value: "Google Flow, CapCut" },
     ],
-    videoUrl: "/images/Elora-Hospital%20AI%20video.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290765/Elora-Hospital_Ai_Video_nc6ghh.mp4",
     isPlaceholder: false,
   },
   {
@@ -90,7 +92,8 @@ export const projects = [
       { label: "Project Type", value: "Promotional Product Video" },
       { label: "Website", value: "junqo.cc", href: "https://junqo.cc" },
     ],
-    videoUrl: "/images/junqo-motiongraphics.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790354376/junqo-motion_aew266.mp4",
     isPlaceholder: false,
   },
   {
@@ -114,7 +117,8 @@ export const projects = [
       { label: "Format", value: "Short-Form Social Media Video" },
       { label: "Tools", value: "CapCut" },
     ],
-    videoUrl: "/images/gala%20content.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290313/Gala_Content_compressed_cwkdlt.mp4",
     isPlaceholder: false,
   },
   {
@@ -142,7 +146,8 @@ export const projects = [
       { label: "Tools", value: "CapCut" },
       { label: "Website", value: "paystack.com", href: "https://paystack.com" },
     ],
-    videoUrl: "/images/projects/paystack%20ads.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290267/Paystack_Ads_compressed_pdpkay.mp4",
     isPlaceholder: false,
   },
   {
@@ -190,7 +195,8 @@ export const projects = [
       { label: "Website", value: "nannoy.com", href: "https://nannoy.com" },
       { label: "Tools", value: "CapCut" },
     ],
-    videoUrl: "/images/projects/nannoy%20ads.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790289903/Nannoy_Ads_compressed_ctqwfv.mp4",
     isPlaceholder: false,
   },
 ];
