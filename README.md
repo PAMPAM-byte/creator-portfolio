@@ -41,6 +41,7 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 
 | Project | Route |
 | --- | --- |
+| The Bridge Transport, RCCG — Road-Safety Awareness Film | `/work/the-bridge-road-safety-awareness` |
 | Chef — Nigerian Jollof Rice AI Cooking Video | `/work/chef-jollof-ai-series` |
 | Elora Medical Centre — AI UGC Healthcare Video | `/work/elora-medical-centre` |
 | Junqo — Product Motion Graphics | `/work/junqo-motion-graphics` |
@@ -49,7 +50,7 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 | Nannoy — Cinematic Product Update Teaser | `/work/nannoy-announcement` |
 | Nannoy — Product Explainer Video | `/work/nannoy-product-explainer` |
 
-The gallery filters are All, Short-Form, AI Videos, Promotional, Motion Graphics, and Social Media. A project shows under each id listed in its `categories` array.
+The gallery filters are All, Short-Form, AI Videos, Public Awareness, Promotional, Motion Graphics, and Social Media. A project shows under each id listed in its `categories` array.
 
 Cards and case-study covers play the project file muted and looping while the frame is on screen. A still poster stays up until playback starts. Visitors who prefer reduced motion, and projects with no video, stay on the still. **Watch project** opens the player with sound. YouTube and Vimeo links work in that player as well as local `.mp4`, `.webm`, and `.ogg` files.
 
@@ -78,7 +79,7 @@ Add an object to the `projects` array in `src/data/projects.js`. The case-study 
 | --- | --- |
 | `slug` | URL segment. Use lowercase words and hyphens. |
 | `title`, `category`, `summary` | Card and case-study copy. `category` is the line under the title. |
-| `categories` | Filter ids: `short-form`, `ai`, `promotional`, `motion`, `social`. |
+| `categories` | Filter ids: `short-form`, `ai`, `public-awareness`, `promotional`, `motion`, `social`. |
 | `frame` | `square` (1:1), `vertical` (9:16), or `wide`. |
 | `thumbnail`, `thumbnailAlt` | Poster image and its description. |
 | `tools` | Short tool list on the card. An empty array hides that line. |

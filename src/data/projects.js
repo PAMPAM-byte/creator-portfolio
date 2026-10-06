@@ -15,12 +15,38 @@ export const filters = [
   { id: "all", label: "All" },
   { id: "short-form", label: "Short-Form" },
   { id: "ai", label: "AI Videos" },
+  { id: "public-awareness", label: "Public Awareness" },
   { id: "promotional", label: "Promotional" },
   { id: "motion", label: "Motion Graphics" },
   { id: "social", label: "Social Media" },
 ];
 
 export const projects = [
+  {
+    slug: "the-bridge-road-safety-awareness",
+    title: "The Bridge Transport, RCCG — Road-Safety Awareness Film",
+    category: "AI Videos · Public Awareness",
+    categories: ["ai", "public-awareness"],
+    frame: "wide",
+    thumbnail: "/images/projects/road-safety-awareness.jpg",
+    thumbnailAlt:
+      "A man checking the tyre pressure of a silver vehicle, with The Bridge Transport logo in the corner",
+    tools: ["Google Flow", "Google AI Studio", "CapCut"],
+    summary:
+      "I created this AI-generated road-safety awareness film for The Bridge Transport, RCCG. It communicates practical safety measures for drivers and passengers during the ember months through the journey of a Nigerian family.",
+    detail:
+      "I handled the visual development, scene planning, AI generation and final editing. The production required maintaining consistency across the characters, clothing, vehicle and environments while carefully coordinating the visuals with an off-screen narration. The film was produced in a 16:9 format for presentation on a church screen and edited into a clear, engaging public-awareness story.",
+    facts: [
+      { label: "My Role", value: "AI Filmmaker & Video Editor" },
+      { label: "Project Type", value: "AI Road-Safety Awareness Film" },
+      { label: "Created For", value: "The Bridge Transport, RCCG" },
+      { label: "Format", value: "16:9 · Church-Screen Presentation" },
+      { label: "Tools", value: "Google Flow, Google AI Studio, CapCut" },
+    ],
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1791254411/Road_Safety_Awareness_ir4drh.mp4",
+    isPlaceholder: false,
+  },
   {
     slug: "chef-jollof-ai-series",
     title: "Chef — Nigerian Jollof Rice AI Cooking Video",
