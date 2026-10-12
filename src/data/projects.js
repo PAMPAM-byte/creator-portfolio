@@ -23,6 +23,29 @@ export const filters = [
 
 export const projects = [
   {
+    slug: "tech-in-30-seconds-sass-vs-scss",
+    title: "Tech in 30 Seconds — Sass vs SCSS",
+    category: "Short-form Educational / Tech Content",
+    categories: ["short-form"],
+    frame: "square",
+    thumbnail: "/images/projects/tech-tutorial.jpg",
+    thumbnailAlt:
+      "A presenter in glasses and a red top explaining CSS, with an on-screen caption",
+    tools: ["CapCut"],
+    summary:
+      "A short-form tech video explaining Sass and SCSS. Background music, sound effects, captions, and transitions keep the edit engaging, easy to follow, and visually interesting while maintaining a clean educational style.",
+    facts: [
+      { label: "Project Type", value: "Short-form Educational / Tech Content" },
+      { label: "Editing Software", value: "CapCut" },
+      {
+        label: "Editing Elements",
+        value: "Background music, sound effects, captions, transitions",
+      },
+    ],
+    videoUrl: "/images/projects/tech%20tutorial.mp4",
+    isPlaceholder: false,
+  },
+  {
     slug: "the-bridge-road-safety-awareness",
     title: "The Bridge Transport, RCCG — Road-Safety Awareness Film",
     category: "AI Videos · Public Awareness",
