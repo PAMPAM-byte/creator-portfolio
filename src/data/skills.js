@@ -9,6 +9,7 @@ export const tools = [
   { id: "after-effects", name: "After Effects" },
   { id: "canva", name: "Canva" },
   { id: "flow", name: "Google Flow" },
+  { id: "grok", name: "Grok" },
   { id: "ai-video", name: "AI video-generation tools" },
 ];
 
