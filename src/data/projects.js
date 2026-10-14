@@ -42,7 +42,8 @@ export const projects = [
         value: "Background music, sound effects, captions, transitions",
       },
     ],
-    videoUrl: "/images/projects/tech%20tutorial.mp4",
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1791993299/tech_tutorial_qdrzmv.mp4",
     isPlaceholder: false,
   },
   {
