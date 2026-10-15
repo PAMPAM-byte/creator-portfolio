@@ -1,6 +1,7 @@
 /**
  * SKILLS & TOOLS
- * The tools list and the craft list render in the Skills section.
+ * Editing tools, AI tools, and craft render separately in the Skills section.
+ * Add AI tools to aiTools to keep them separate from editing software.
  */
 
 export const tools = [
@@ -8,9 +9,17 @@ export const tools = [
   { id: "premiere", name: "Adobe Premiere Pro" },
   { id: "after-effects", name: "After Effects" },
   { id: "canva", name: "Canva" },
+];
+
+export const aiTools = [
   { id: "flow", name: "Google Flow" },
+  { id: "google-ai-studio", name: "Google AI Studio" },
   { id: "grok", name: "Grok" },
-  { id: "ai-video", name: "AI video-generation tools" },
+  { id: "runway", name: "Runway" },
+  { id: "kling", name: "Kling" },
+  { id: "sora", name: "Sora" },
+  { id: "veo", name: "Veo" },
+  { id: "higgsfield", name: "Higgsfield" },
 ];
 
 export const craft = [

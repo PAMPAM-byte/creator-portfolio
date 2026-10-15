@@ -1,6 +1,6 @@
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
-import { craft, tools } from "@/data/skills";
+import { aiTools, craft, tools } from "@/data/skills";
 
 export default function Skills() {
   return (
@@ -15,10 +15,10 @@ export default function Skills() {
           kicker="Skills"
           title="Tools and craft"
         />
-        <div className="grid gap-20 lg:grid-cols-2">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           <Reveal>
             <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
-              Tools
+              Editing tools
             </h3>
             <ul className="mt-8 space-y-4">
               {tools.map((tool) => (
@@ -29,6 +29,18 @@ export default function Skills() {
             </ul>
           </Reveal>
           <Reveal delay={0.08}>
+            <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
+              AI tools
+            </h3>
+            <ul className="mt-8 space-y-4">
+              {aiTools.map((tool) => (
+                <li key={tool.id} className="text-lg text-ink">
+                  {tool.name}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal delay={0.16}>
             <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
               Craft
             </h3>
