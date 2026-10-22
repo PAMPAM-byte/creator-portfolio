@@ -36,17 +36,17 @@ export const site = {
    * WhatsApp uses the digits-only number (country code, no + or spaces).
    */
   email: "your-email@example.com",
-  phoneDisplay: "+234 800 000 0000",
-  phoneHref: "tel:+2348000000000",
+  phoneDisplay: "07050830039",
+  phoneHref: "tel:+2347050830039",
   whatsappNumber: "2347050830039",
   whatsappMessage:
     "Hi Favour, I would like to talk about a video project.",
 
   social: {
-    linkedin: "https://www.linkedin.com/in/your-handle",
-    twitter: "https://x.com/your-handle",
-    instagram: "https://www.instagram.com/your-handle",
-    tiktok: "https://www.tiktok.com/@your-handle",
+    linkedin: "https://www.linkedin.com/in/favour-akintade-394a55342",
+    twitter: "https://x.com/pamilhereen",
+    instagram: "https://www.instagram.com/pamilhereen",
+    tiktok: "https://www.tiktok.com/@pamilhereen",
   },
 
   form: {

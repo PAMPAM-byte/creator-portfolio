@@ -1,6 +1,8 @@
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
+import { site } from "@/data/site";
+import { whatsappHref } from "@/lib/whatsapp";
 
 const details = [
   {
@@ -10,8 +12,8 @@ const details = [
   },
   {
     label: "Phone",
-    value: "07050850039",
-    href: "tel:+2347050850039",
+    value: site.phoneDisplay,
+    href: site.phoneHref,
   },
   { label: "Location", value: "Ekiti State, Nigeria" },
 ];
@@ -33,7 +35,11 @@ const socials = [
     href: "https://www.instagram.com/pamilhereen",
     Icon: InstagramIcon,
   },
-  { name: "WhatsApp", href: "https://wa.me/2347050830039", Icon: WhatsAppIcon },
+  {
+    name: "WhatsApp",
+    href: whatsappHref(site.whatsappNumber, site.whatsappMessage),
+    Icon: WhatsAppIcon,
+  },
 ];
 
 export default function Contact() {
