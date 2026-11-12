@@ -97,30 +97,6 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    slug: "chef-jollof-ai-series",
-    title: "Chef — Nigerian Jollof Rice AI Cooking Video",
-    category: "AI Video · Food Content · Visual Storytelling",
-    categories: ["ai", "short-form", "social"],
-    frame: "square",
-    thumbnail: "/images/projects/chef-jollof.jpg",
-    thumbnailAlt:
-      "A chef in a white coat and yellow apron, smiling over a pot of rice with a wooden spoon",
-    tools: ["Google Flow", "CapCut"],
-    summary:
-      "An AI-generated cooking video featuring my original recurring chef character, preparing Nigerian jollof rice. I developed the concept, planned the scenes, maintained the character's visual consistency, generated the clips, and edited them into an engaging food-content experience rooted in Nigerian culture.",
-    facts: [
-      {
-        label: "My Role",
-        value: "AI Video Creator, Video Editor and Creative Director",
-      },
-      { label: "Project Type", value: "Original AI Food-Content Series" },
-      { label: "Tools", value: "Google Flow, CapCut" },
-    ],
-    videoUrl:
-      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290458/Chef_Pampam_compressed_xvc6vj.mp4",
-    isPlaceholder: false,
-  },
-  {
     slug: "elora-medical-centre",
     title: "Elora Medical Centre — AI UGC Healthcare Video",
     category: "AI Video · UGC Content · Healthcare Promotion",
@@ -194,35 +170,6 @@ export const projects = [
     ],
     videoUrl:
       "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290313/Gala_Content_compressed_cwkdlt.mp4",
-    isPlaceholder: false,
-  },
-  {
-    slug: "paystack-comedy-ad",
-    title: "Paystack — Short-Form Comedy Advertisement",
-    category: "Comedy Advertising · Social Media · Brand Content",
-    categories: ["social", "short-form", "promotional"],
-    frame: "square",
-    thumbnail: "/images/projects/paystack-ads.jpg",
-    thumbnailAlt:
-      "A person in glasses and a patterned top speaking to camera, with a red bottle beside them",
-    tools: ["CapCut"],
-    summary:
-      "An independently created short-form comedy video featuring Paystack. I used a relatable character, humour, storytelling, and engaging editing to introduce the brand naturally within an entertaining social-media scenario.",
-    facts: [
-      {
-        label: "My Role",
-        value: "Content Creator, Video Editor, Scriptwriter and On-Camera Talent",
-      },
-      {
-        label: "Project Type",
-        value: "Independent Brand-Advertising Concept",
-      },
-      { label: "Format", value: "Short-Form Comedy Video" },
-      { label: "Tools", value: "CapCut" },
-      { label: "Website", value: "paystack.com", href: "https://paystack.com" },
-    ],
-    videoUrl:
-      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1790290267/Paystack_Ads_compressed_pdpkay.mp4",
     isPlaceholder: false,
   },
   {

@@ -31,7 +31,7 @@ export default function About() {
             </p>
             <p>
               My work includes short-form social content, promotional videos,
-              product explainers, comedy advertisements, motion graphics,
+              product explainers, motion graphics,
               UGC-style videos, and AI-generated storytelling. I combine
               creative concepts, purposeful editing, captions, pacing, and
               visual direction to produce content suited for brands and digital

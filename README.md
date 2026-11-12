@@ -44,11 +44,9 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 | DS Tech — AI Social-Media Advertising Video | `/work/ds-tech-ai-social-media-ad` |
 | Tech in 30 Seconds — Sass vs SCSS | `/work/tech-in-30-seconds-sass-vs-scss` |
 | The Bridge Transport, RCCG — Road-Safety Awareness Film | `/work/the-bridge-road-safety-awareness` |
-| Chef — Nigerian Jollof Rice AI Cooking Video | `/work/chef-jollof-ai-series` |
 | Elora Medical Centre — AI UGC Healthcare Video | `/work/elora-medical-centre` |
 | Junqo — Product Motion Graphics | `/work/junqo-motion-graphics` |
 | Gala Sausage Roll — Social Media Brand Content | `/work/gala-sausage-roll` |
-| Paystack — Short-Form Comedy Advertisement | `/work/paystack-comedy-ad` |
 | Nannoy — Cinematic Product Update Teaser | `/work/nannoy-announcement` |
 | Nannoy — Product Explainer Video | `/work/nannoy-product-explainer` |
 
