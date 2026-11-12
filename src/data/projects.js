@@ -3,7 +3,7 @@
  *
  * How to edit:
  * 1. Replace `thumbnail` with a file in /public/images/projects/
- * 2. Set `videoUrl` to a YouTube, Vimeo, or local /videos/your-file.mp4 link
+ * 2. Set `videoUrl` to a Cloudinary .mp4, YouTube, or Vimeo link
  * 3. Rewrite overview, objective, role, approach, outcome in your own words
  * 4. Set `isPlaceholder: false` when the entry is real
  * 5. Delete any sample project you do not want to show

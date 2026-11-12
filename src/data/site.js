@@ -1,6 +1,6 @@
 /**
  * SITE SETTINGS — edit this file first.
- * Replace placeholders (email, phone, social URLs, showreel).
+ * Name, contact details, and social links used across the site.
  * Do not put API keys here. Keys belong in `.env.local` (see `.env.example`).
  */
 
@@ -32,10 +32,11 @@ export const site = {
   showreelUrl: "",
 
   /**
-   * CONTACT — replace every placeholder before publishing.
+   * CONTACT — used in Let’s talk, the footer, the WhatsApp button,
+   * and the contact-form fallback. Change it here only.
    * WhatsApp uses the digits-only number (country code, no + or spaces).
    */
-  email: "your-email@example.com",
+  email: "favourpamilerin1@gmail.com",
   phoneDisplay: "07050830039",
   phoneHref: "tel:+2347050830039",
   whatsappNumber: "2347050830039",

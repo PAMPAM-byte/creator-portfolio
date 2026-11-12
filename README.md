@@ -41,6 +41,7 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 
 | Project | Route |
 | --- | --- |
+| Tech in 30 Seconds — Sass vs SCSS | `/work/tech-in-30-seconds-sass-vs-scss` |
 | The Bridge Transport, RCCG — Road-Safety Awareness Film | `/work/the-bridge-road-safety-awareness` |
 | Chef — Nigerian Jollof Rice AI Cooking Video | `/work/chef-jollof-ai-series` |
 | Elora Medical Centre — AI UGC Healthcare Video | `/work/elora-medical-centre` |
@@ -62,8 +63,7 @@ Copy lives in data files and a few components. Paths below are from the project 
 | --- | --- |
 | Name, role, location, tagline, portrait, navigation | `src/data/site.js` |
 | About copy, including PAMPAM | `src/components/About.jsx` |
-| Email, phone, location, and social icons in Let’s talk | `src/components/Contact.jsx` |
-| Footer social links, floating WhatsApp button, form fallback address | `src/data/site.js` |
+| Email, phone, WhatsApp, and social links (used in Let’s talk, the footer, the WhatsApp button, and the form fallback) | `src/data/site.js` |
 | Projects and case studies | `src/data/projects.js` |
 | Service cards | `src/data/services.js` |
 | Tools and craft lists | `src/data/skills.js` |
@@ -85,12 +85,12 @@ Add an object to the `projects` array in `src/data/projects.js`. The case-study 
 | `tools` | Short tool list on the card. An empty array hides that line. |
 | `detail` | Optional paragraph under the summary on the case study. |
 | `facts` | Label and value rows on the case study. A fact may include `href`. |
-| `videoUrl` | YouTube, Vimeo, or a local file path. |
+| `videoUrl` | A Cloudinary (or other hosted) `.mp4` link, YouTube, or Vimeo. |
 | `isPlaceholder` | `false` for finished work. |
 
 When `facts` is omitted, the case study uses `overview`, `objective`, `role`, `approach`, `outcome`, and the tools list instead.
 
-Put posters in `public/images/projects/` and video files in `public/`. Encode spaces in `videoUrl` (`/images/gala%20content.mp4`, not a raw space).
+Put posters in `public/images/projects/`. Host video files on Cloudinary and paste the link into `videoUrl`. Large videos kept in the repository slow down cloning and deploys.
 
 ## Contact form
 
@@ -101,8 +101,6 @@ The form posts to `/api/contact`. Copy `.env.example` to `.env.local`. That file
 **Formspree.** Create a form and set `FORMSPREE_FORM_ID` to the id in `https://formspree.io/f/<id>`.
 
 With neither provider set, the form still checks the fields and opens the visitor’s email app, addressed to `email` in `src/data/site.js`.
-
-The public address shown under Let’s talk is the one in `src/components/Contact.jsx`. Update both places when the address changes.
 
 Set `NEXT_PUBLIC_SITE_URL` to the live domain. The sitemap, `robots.txt`, canonical URL, and Open Graph tags use it.
 
@@ -118,7 +116,7 @@ src/app/work/[slug]/    case-study page
 src/components/         page sections and the project gallery
 src/data/               editable site content
 src/lib/                video embeds, form validation, WhatsApp link
-public/images/          video files and the projects/ poster folder
+public/images/projects/ poster images and the portrait
 ```
 
 ## Accessibility and SEO

@@ -5,36 +5,16 @@ import { site } from "@/data/site";
 import { whatsappHref } from "@/lib/whatsapp";
 
 const details = [
-  {
-    label: "Email",
-    value: "favourpamilerin1@gmail.com",
-    href: "mailto:favourpamilerin1@gmail.com",
-  },
-  {
-    label: "Phone",
-    value: site.phoneDisplay,
-    href: site.phoneHref,
-  },
-  { label: "Location", value: "Ekiti State, Nigeria" },
+  { label: "Email", value: site.email, href: `mailto:${site.email}` },
+  { label: "Phone", value: site.phoneDisplay, href: site.phoneHref },
+  { label: "Location", value: site.location },
 ];
 
 const socials = [
-  {
-    name: "TikTok",
-    href: "https://www.tiktok.com/@pamilhereen",
-    Icon: TikTokIcon,
-  },
-  { name: "X", href: "https://x.com/pamilhereen", Icon: XIcon },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/favour-akintade-394a55342",
-    Icon: LinkedInIcon,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/pamilhereen",
-    Icon: InstagramIcon,
-  },
+  { name: "TikTok", href: site.social.tiktok, Icon: TikTokIcon },
+  { name: "X", href: site.social.twitter, Icon: XIcon },
+  { name: "LinkedIn", href: site.social.linkedin, Icon: LinkedInIcon },
+  { name: "Instagram", href: site.social.instagram, Icon: InstagramIcon },
   {
     name: "WhatsApp",
     href: whatsappHref(site.whatsappNumber, site.whatsappMessage),
