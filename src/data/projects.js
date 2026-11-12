@@ -23,6 +23,31 @@ export const filters = [
 
 export const projects = [
   {
+    slug: "ds-tech-ai-social-media-ad",
+    title: "DS Tech — AI Social-Media Advertising Video",
+    category: "AI Video · Digital Marketing · Promotional Ad",
+    categories: ["ai", "promotional", "social", "short-form"],
+    frame: "vertical",
+    thumbnail: "/images/projects/dstech-ai-ad.jpg",
+    thumbnailAlt:
+      "An AI-generated presenter in a navy shirt speaking to camera in a bright office, with the caption Your business is good",
+    tools: ["Google Flow", "Claude", "CapCut"],
+    summary:
+      "An AI-generated vertical advertisement for DS Tech and Digital Marketing Agency, promoting its Facebook and Instagram ads-management service to small-business owners who post consistently but struggle to turn that content into sales.",
+    detail:
+      "I generated the presenter and every scene in Google Flow, keeping the spokesperson, wardrobe, and setting consistent from shot to shot so the ad reads as one continuous campaign. I used Claude to help structure the script and plan the edit, then cut the final piece in CapCut. The edit follows a clear direct-response arc — a relatable hook, the problem, a step-by-step breakdown of the service, the offer and bonus, the payoff, and a WhatsApp call to action — supported by animated captions, on-screen checklists, and UI overlays built for sound-off viewing on Reels and TikTok.",
+    facts: [
+      { label: "My Role", value: "AI Video Creator and Video Editor" },
+      { label: "Created For", value: "DS Tech and Digital Marketing Agency" },
+      { label: "Project Type", value: "AI Social-Media Advertisement" },
+      { label: "Format", value: "9:16 · Short-Form Vertical Video" },
+      { label: "Tools", value: "Google Flow, Claude, CapCut" },
+    ],
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1794520145/DSTECH_AI_AD_gxjkxg.mp4",
+    isPlaceholder: false,
+  },
+  {
     slug: "tech-in-30-seconds-sass-vs-scss",
     title: "Tech in 30 Seconds — Sass vs SCSS",
     category: "Short-form Educational / Tech Content",

@@ -15,6 +15,7 @@ export const aiTools = [
   { id: "flow", name: "Google Flow" },
   { id: "google-ai-studio", name: "Google AI Studio" },
   { id: "grok", name: "Grok" },
+  { id: "claude", name: "Claude" },
   { id: "runway", name: "Runway" },
   { id: "kling", name: "Kling" },
   { id: "sora", name: "Sora" },

@@ -41,6 +41,7 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 
 | Project | Route |
 | --- | --- |
+| DS Tech — AI Social-Media Advertising Video | `/work/ds-tech-ai-social-media-ad` |
 | Tech in 30 Seconds — Sass vs SCSS | `/work/tech-in-30-seconds-sass-vs-scss` |
 | The Bridge Transport, RCCG — Road-Safety Awareness Film | `/work/the-bridge-road-safety-awareness` |
 | Chef — Nigerian Jollof Rice AI Cooking Video | `/work/chef-jollof-ai-series` |
