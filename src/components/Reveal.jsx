@@ -4,6 +4,12 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const ease = [0.16, 1, 0.3, 1];
 
+/**
+ * Fades content up as it scrolls into view.
+ * Always renders the same element on server and client so hydration never
+ * leaves server styles (opacity: 0) stuck in place. With reduced motion the
+ * animation runs instantly.
+ */
 export default function Reveal({
   children,
   className,
@@ -13,18 +19,13 @@ export default function Reveal({
   const reduce = useReducedMotion();
   const Tag = motion[as] || motion.div;
 
-  if (reduce) {
-    const Static = as === "div" ? "div" : as;
-    return <Static className={className}>{children}</Static>;
-  }
-
   return (
     <Tag
       className={className}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-8% 0px" }}
-      transition={{ duration: 0.8, delay, ease }}
+      transition={reduce ? { duration: 0 } : { duration: 0.8, delay, ease }}
     >
       {children}
     </Tag>

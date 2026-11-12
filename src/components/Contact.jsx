@@ -27,35 +27,41 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="scroll-mt-28 px-6 py-16 sm:px-10 md:py-24 lg:px-16"
+      className="scroll-mt-20 px-5 py-16 sm:px-10 md:py-24 lg:px-16"
     >
-      <div className="mx-auto max-w-[1180px]">
+      <div className="mx-auto max-w-[1240px]">
         <SectionHeader
           id="contact-heading"
           kicker="Contact"
-          title="Let’s talk"
-        />
+          meta={site.location}
+          title="Have a video in mind? Let’s talk."
+        >
+          Tell me about the brand, the platform, and what the video needs to
+          do. I’ll reply with next steps.
+        </SectionHeader>
 
-        <div className="grid gap-20 lg:grid-cols-12">
+        <div className="grid gap-16 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-4">
-            <ul className="space-y-8">
+            <dl className="border-t border-line">
               {details.map((item) => (
-                <li key={item.label}>
-                  <p className="text-sm text-mute">{item.label}</p>
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      className="mt-1 inline-block text-lg text-ink transition-opacity duration-300 hover:opacity-60"
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
-                    <p className="mt-1 text-lg text-ink">{item.value}</p>
-                  )}
-                </li>
+                <div key={item.label} className="border-b border-line py-5">
+                  <dt className="eyebrow text-mute">{item.label}</dt>
+                  <dd className="mt-2">
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="nav-link text-lg break-all text-ink"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span className="text-lg text-ink">{item.value}</span>
+                    )}
+                  </dd>
+                </div>
               ))}
-            </ul>
-            <ul className="mt-10 flex items-center gap-3">
+            </dl>
+            <ul className="mt-8 flex flex-wrap items-center gap-2">
               {socials.map(({ name, href, Icon }) => (
                 <li key={name}>
                   <a
@@ -64,7 +70,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     aria-label={`${name} profile`}
                     title={name}
-                    className="flex size-11 items-center justify-center text-ink transition-opacity duration-300 hover:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-ink"
+                    className="flex size-11 items-center justify-center border border-line text-ink transition-colors duration-300 hover:border-ink hover:bg-ink hover:text-snow"
                   >
                     <Icon />
                   </a>

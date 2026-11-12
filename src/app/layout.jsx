@@ -1,21 +1,22 @@
-import { Instrument_Serif, Source_Sans_3 } from "next/font/google";
+import { Archivo, JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/data/site";
 import "./globals.css";
 
-const display = Instrument_Serif({
+// Archivo carries both roles: condensed (wdth axis) for title-card headings,
+// normal width for body copy. JetBrains Mono is for timecodes and labels.
+const sans = Archivo({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-display-src",
+  axes: ["wdth"],
+  variable: "--font-sans-src",
   display: "swap",
 });
 
-const sans = Source_Sans_3({
+const mono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-sans-src",
+  variable: "--font-mono-src",
   display: "swap",
 });
 
@@ -77,7 +78,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${display.variable} ${sans.variable} h-full antialiased`}
+      className={`${sans.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-snow font-sans text-ink">
         <script

@@ -7,7 +7,7 @@
 export const site = {
   name: "Favour Oluwapamilerin Akintade",
   shortName: "Favour",
-  brand: "PAMPAM",
+  displayName: "Favour Akintade",
   role: "Video Editor & AI Content Creator",
   location: "Ekiti State, Nigeria",
   tagline:
@@ -30,6 +30,14 @@ export const site = {
    * Leave empty until you have a reel — the portrait still will be used.
    */
   showreelUrl: "",
+
+  /** Organisations named in the "Made for" row under the hero showreel. */
+  clients: [
+    "DS Tech and Digital Marketing Agency",
+    "The Bridge Transport, RCCG",
+    "Junqo",
+    "Nannoy",
+  ],
 
   /**
    * CONTACT — used in Let’s talk, the footer, the WhatsApp button,

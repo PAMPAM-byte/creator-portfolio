@@ -2,8 +2,6 @@
 
 Portfolio for Favour Oluwapamilerin Akintade, a video editor and AI content creator based in Ekiti State, Nigeria. The site is a light editorial gallery of selected work, case studies, services, and a contact form.
 
-The creative name PAMPAM appears only in the About section.
-
 ## Requirements
 
 - Node.js 20.9 or later
@@ -52,7 +50,9 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 
 The gallery filters are All, Short-Form, AI Videos, Public Awareness, Promotional, Motion Graphics, and Social Media. A project shows under each id listed in its `categories` array.
 
-Cards and case-study covers play the project file muted and looping while the frame is on screen. A still poster stays up until playback starts. Visitors who prefer reduced motion, and projects with no video, stay on the still. **Watch project** opens the player with sound. YouTube and Vimeo links work in that player as well as local `.mp4`, `.webm`, and `.ogg` files.
+The homepage hero shows the portrait from `site.profile`, with the names in `site.clients` listed underneath.
+
+Cards play a six-second excerpt of the project muted and looping while the frame is on screen. Cloudinary cuts the excerpt from `videoUrl` (`reelClipSrc` in `src/lib/embed.js`), so no extra files are needed. A still poster stays up until playback starts. Visitors who prefer reduced motion, and projects with no video, stay on the still. **Watch project** opens the player with sound. YouTube and Vimeo links work in that player as well as local `.mp4`, `.webm`, and `.ogg` files.
 
 ## Edit the site
 
@@ -61,7 +61,7 @@ Copy lives in data files and a few components. Paths below are from the project 
 | What to change | Where |
 | --- | --- |
 | Name, role, location, tagline, portrait, navigation | `src/data/site.js` |
-| About copy, including PAMPAM | `src/components/About.jsx` |
+| About copy | `src/components/About.jsx` |
 | Email, phone, WhatsApp, and social links (used in Let’s talk, the footer, the WhatsApp button, and the form fallback) | `src/data/site.js` |
 | Projects and case studies | `src/data/projects.js` |
 | Service cards | `src/data/services.js` |

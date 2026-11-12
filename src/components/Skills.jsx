@@ -2,56 +2,45 @@ import Reveal from "@/components/Reveal";
 import SectionHeader from "@/components/SectionHeader";
 import { aiTools, craft, tools } from "@/data/skills";
 
+const groups = [
+  { title: "Editing", items: tools },
+  { title: "AI generation", items: aiTools },
+  { title: "Craft", items: craft },
+];
+
 export default function Skills() {
   return (
     <section
       id="skills"
       aria-labelledby="skills-heading"
-      className="scroll-mt-28 px-6 py-16 sm:px-10 md:py-24 lg:px-16"
+      className="on-dark scroll-mt-20 bg-panel px-5 py-16 text-snow sm:px-10 md:py-24 lg:px-16"
     >
-      <div className="mx-auto max-w-[1180px]">
+      <div className="mx-auto max-w-[1240px]">
         <SectionHeader
           id="skills-heading"
-          kicker="Skills"
+          kicker="Toolkit"
+          meta={`${tools.length + aiTools.length} tools`}
           title="Tools and craft"
+          tone="dark"
         />
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
-          <Reveal>
-            <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
-              Editing tools
-            </h3>
-            <ul className="mt-8 space-y-4">
-              {tools.map((tool) => (
-                <li key={tool.id} className="text-lg text-ink">
-                  {tool.name}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
-              AI tools
-            </h3>
-            <ul className="mt-8 space-y-4">
-              {aiTools.map((tool) => (
-                <li key={tool.id} className="text-lg text-ink">
-                  {tool.name}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <h3 className="text-sm tracking-[0.16em] text-mute uppercase">
-              Craft
-            </h3>
-            <ul className="mt-8 space-y-4">
-              {craft.map((skill) => (
-                <li key={skill.id} className="text-lg text-ink">
-                  {skill.name}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+        <div className="grid gap-12 md:grid-cols-3 md:gap-10">
+          {groups.map((group, index) => (
+            <Reveal key={group.title} delay={index * 0.06}>
+              <h3 className="eyebrow border-b border-panel-line pb-4 text-panel-mute">
+                {group.title}
+              </h3>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item.id}
+                    className="border border-panel-line px-3.5 py-2 text-[15px] text-snow"
+                  >
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

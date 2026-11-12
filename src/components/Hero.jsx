@@ -1,86 +1,63 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
 import { site } from "@/data/site";
 import { blurDataURL } from "@/lib/image";
 
-const ease = [0.16, 1, 0.3, 1];
-
 export default function Hero() {
-  const reduce = useReducedMotion();
-
   return (
     <section
-      className="px-6 py-16 sm:px-10 md:py-24 lg:px-16"
       aria-labelledby="hero-heading"
+      className="px-5 pt-10 pb-16 sm:px-10 md:pt-16 md:pb-20 lg:px-16"
     >
-      <div className="mx-auto grid max-w-[1180px] items-end gap-16 lg:grid-cols-12 lg:gap-10">
-        <div className="lg:col-span-7 lg:pb-8">
-          <motion.h1
-            id="hero-heading"
-            className="font-display text-5xl leading-[1.05] text-ink sm:text-6xl lg:text-7xl"
-            initial={reduce ? false : { opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.08, ease }}
-          >
-            Hi, I’m {site.shortName}.
-          </motion.h1>
+      <div className="mx-auto max-w-[1240px]">
+        <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-10">
+          <div className="order-2 lg:order-1 lg:col-span-7 lg:pb-2">
+            <p className="eyebrow text-mute">
+              {site.role} <span aria-hidden="true">·</span> {site.location}
+            </p>
+            <h1
+              id="hero-heading"
+              className="display mt-6 text-[clamp(3.4rem,9.5vw,8.5rem)] leading-[0.86] text-ink"
+            >
+              {site.displayName}
+            </h1>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-mute">
+              {site.tagline}
+            </p>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link href="/#work" className="btn-primary">
+                View selected work
+              </Link>
+              <Link href="/#contact" className="btn-outline">
+                Start a project
+              </Link>
+            </div>
+          </div>
 
-          <motion.p
-            className="mt-8 text-xl text-ink md:text-2xl"
-            initial={reduce ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.16, ease }}
-          >
-            {site.role}
-          </motion.p>  
-
-          <motion.p
-            className="mt-8 max-w-xl text-lg leading-8 text-mute"
-            initial={reduce ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.24, ease }}
-          >
-            {site.tagline} 
-          </motion.p>
-
-          <motion.div
-            className="mt-12 flex flex-wrap items-center gap-8"
-            initial={reduce ? false : { opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.32, ease }}
-          >
-            <Link href="/#work" className="btn-primary">
-              View my work
-            </Link>
-            <Link href="/#contact" className="nav-link text-[15px] text-ink">
-              Contact me
-            </Link>
-          </motion.div>
+          <div className="order-1 lg:order-2 lg:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden bg-wash">
+              <Image
+                src={site.profile.src}
+                alt={site.profile.alt}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-cover object-top"
+                placeholder="blur"
+                blurDataURL={blurDataURL}
+              />
+            </div>
+          </div>
         </div>
 
-        <motion.div
-          className="lg:col-span-4 lg:col-start-9"
-          initial={reduce ? false : { opacity: 0, y: 32 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease }}
-        >
-          <div className="relative aspect-[3/4] overflow-hidden bg-wash">
-            <Image
-              src={site.profile.src}
-              alt={site.profile.alt}
-              fill
-              priority
-              sizes="(max-width: 1024px) 90vw, 360px"
-              className="object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.03]"
-              style={{ objectFit: "cover", objectPosition: "center top" }}
-              placeholder="blur"
-              blurDataURL={blurDataURL}
-            />
-          </div>
-        </motion.div>
+        <div className="mt-14 flex flex-col gap-3 border-y border-line py-6 sm:flex-row sm:items-baseline sm:gap-8">
+          <p className="eyebrow shrink-0 text-mute">Made for</p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[15px] text-ink">
+            {site.clients.map((client) => (
+              <li key={client}>{client}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

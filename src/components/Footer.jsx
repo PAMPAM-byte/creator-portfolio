@@ -10,38 +10,38 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-black text-snow">
-      <div className="mx-auto max-w-[1180px] px-6 pb-16 pt-8 sm:px-10 lg:px-16">
-        <div className="grid gap-16 border-t border-white/15 pt-16 md:grid-cols-3">
-          <div>
-            <p className="tracking-[0.16em]">{site.shortName}</p>
-            <p className="mt-4 max-w-xs text-sm leading-6 text-snow/60">
-              {site.role}. {site.location}.
-            </p>
+    <footer className="mt-auto overflow-hidden bg-panel text-snow">
+      <div className="mx-auto max-w-[1368px] px-5 pt-16 pb-10 sm:px-10 lg:px-16">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="eyebrow text-panel-mute">Email</p>
+            <a
+              href={`mailto:${site.email}`}
+              className="nav-link mt-5 text-xl break-all text-snow"
+            >
+              {site.email}
+            </a>
           </div>
-          <div>
-            <p className="text-sm text-snow/60">Navigate</p>
+          <div className="md:col-span-3 md:col-start-7">
+            <p className="eyebrow text-panel-mute">Navigate</p>
             <ul className="mt-5 space-y-3">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="transition-opacity duration-300 hover:opacity-55"
-                  >
+                  <Link href={item.href} className="nav-link">
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div>
-            <p className="text-sm text-snow/60">Social</p>
+          <div className="md:col-span-3">
+            <p className="eyebrow text-panel-mute">Social</p>
             <ul className="mt-5 space-y-3">
               {social.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="transition-opacity duration-300 hover:opacity-55"
+                    className="nav-link"
                     rel="noreferrer"
                     target="_blank"
                   >
@@ -52,9 +52,15 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <p className="mt-20 text-sm text-snow/60">
-          © 2026 {site.name}. All rights reserved.
-        </p>
+
+        <div className="mt-16 flex flex-col gap-2 border-t border-panel-line pt-6 sm:flex-row sm:justify-between">
+          <p className="eyebrow text-panel-mute">
+            © {new Date().getFullYear()} {site.name}
+          </p>
+          <p className="eyebrow text-panel-mute">
+            {site.role} · {site.location}
+          </p>
+        </div>
       </div>
     </footer>
   );

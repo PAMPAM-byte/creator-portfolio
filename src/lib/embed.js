@@ -34,3 +34,23 @@ export function fileVideoSrc(url) {
   const embed = getEmbed(url);
   return embed?.type === "file" ? embed.src : null;
 }
+
+/** Aspect-ratio label for a project's `frame` value. */
+export const frameRatio = { wide: "16:9", square: "1:1", vertical: "9:16" };
+
+/**
+ * A short, lightweight excerpt of a Cloudinary video for the showreel.
+ * Cloudinary trims and compresses it on the fly from URL parameters.
+ * Non-Cloudinary file URLs are returned unchanged.
+ */
+export function reelClipSrc(url, { start = 1, duration = 6 } = {}) {
+  const src = fileVideoSrc(url);
+  if (!src) return null;
+  if (!src.includes("res.cloudinary.com") || !src.includes("/video/upload/")) {
+    return src;
+  }
+  return src.replace(
+    "/video/upload/",
+    `/video/upload/so_${start},du_${duration},h_720,c_limit,q_auto/`,
+  );
+}

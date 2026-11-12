@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useId, useState } from "react";
 import { nav, site } from "@/data/site";
 
+const links = nav.filter((item) => item.href !== "/#contact");
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -31,23 +33,23 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 transition-[background-color,box-shadow] duration-300 ${
+      className={`sticky top-0 z-40 border-b transition-colors duration-300 ${
         scrolled || open
-          ? "bg-snow/90 shadow-[0_1px_0_var(--line)] backdrop-blur-md"
-          : "bg-transparent"
+          ? "border-line bg-snow/90 backdrop-blur-md"
+          : "border-transparent bg-snow"
       }`}
     >
-      <div className="mx-auto flex max-w-[1180px] items-center justify-between gap-6 px-6 py-5 sm:px-10 lg:px-16">
+      <div className="mx-auto flex h-16 max-w-[1368px] items-center justify-between gap-6 px-5 sm:px-10 lg:px-16">
         <Link
           href="/"
-          className="text-[15px] tracking-[0.18em] text-ink"
+          className="display text-[1.35rem] leading-none text-ink"
           onClick={() => setOpen(false)}
         >
-          {site.shortName}
+          {site.displayName}
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-10 md:flex">
-          {nav.map((item) => (
+        <nav aria-label="Primary" className="hidden items-center gap-9 md:flex">
+          {links.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -56,6 +58,9 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
+          <Link href="/#contact" className="btn-primary btn-sm">
+            Let’s talk
+          </Link>
         </nav>
 
         <button
@@ -81,14 +86,17 @@ export default function Header() {
       </div>
 
       {open ? (
-        <div id={menuId} className="bg-snow px-6 pb-10 pt-4 md:hidden">
+        <div
+          id={menuId}
+          className="h-[calc(100dvh-4rem)] border-t border-line bg-snow px-5 pt-6 pb-10 md:hidden"
+        >
           <nav aria-label="Mobile">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col">
               {nav.map((item) => (
-                <li key={item.href}>
+                <li key={item.href} className="border-b border-line">
                   <Link
                     href={item.href}
-                    className="block py-3 text-2xl text-ink"
+                    className="display block py-4 text-4xl text-ink"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}

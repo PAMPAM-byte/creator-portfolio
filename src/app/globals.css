@@ -1,33 +1,40 @@
 @import "tailwindcss";
 
+/*
+ * Palette: black and white only.
+ * Light surfaces for reading; "panel" surfaces borrow the look of an
+ * editing suite (monitor, timeline, footer).
+ */
 :root {
-  --background: #fbfcfd;
-  --foreground: #16181c;
   --snow: #fbfcfd;
   --ink: #16181c;
   --mute: #5c6570;
-  --line: #e6eaee;
-  --wash: #f3f5f7;
-  --mark: #1e3a34;
+  --line: #e2e5e9;
+  --wash: #f1f3f5;
+  --panel: #0c0d0f;
+  --panel-2: #17191c;
+  --panel-line: #2a2d32;
+  --panel-mute: #8b929b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-snow: var(--snow);
   --color-ink: var(--ink);
   --color-mute: var(--mute);
   --color-line: var(--line);
   --color-wash: var(--wash);
-  --color-mark: var(--mark);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-panel-line: var(--panel-line);
+  --color-panel-mute: var(--panel-mute);
   --font-sans: var(--font-sans-src);
-  --font-display: var(--font-display-src);
+  --font-mono: var(--font-mono-src);
 }
 
 html {
   background: var(--snow);
   color: var(--ink);
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 5.5rem;
 }
 
 html,
@@ -38,12 +45,12 @@ body {
 body {
   background: var(--snow);
   color: var(--ink);
-  font-family: var(--font-sans-src), "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans-src), ui-sans-serif, system-ui, sans-serif;
 }
 
 ::selection {
-  background: rgb(30 58 52 / 0.16);
-  color: var(--ink);
+  background: var(--ink);
+  color: var(--snow);
 }
 
 :focus-visible {
@@ -51,13 +58,35 @@ body {
   outline-offset: 3px;
 }
 
+.on-dark :focus-visible,
 footer :focus-visible {
   outline-color: var(--snow);
 }
 
+.on-dark ::selection,
 footer ::selection {
-  background: rgb(251 252 253 / 0.22);
-  color: var(--snow);
+  background: var(--snow);
+  color: var(--ink);
+}
+
+/* Title-card type: Archivo pulled to a condensed width. */
+.display {
+  font-variation-settings: "wdth" 70;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+/* Small interface labels, like the panels in an editing app. */
+.eyebrow {
+  font-family: var(--font-mono-src), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
 
 .skip-link {
@@ -84,7 +113,7 @@ footer ::selection {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: -3px;
   height: 1px;
   width: 100%;
   background: currentColor;
@@ -95,39 +124,55 @@ footer ::selection {
 
 .nav-link:hover::after,
 .nav-link:focus-visible::after,
-.nav-link[aria-current="page"]::after,
-.nav-link[data-active="true"]::after {
+.nav-link[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
-.btn-primary {
+.btn-primary,
+.btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid var(--ink);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-primary {
   background: var(--ink);
   color: var(--snow);
-  padding: 0.9rem 1.7rem;
-  font-size: 0.95rem;
-  letter-spacing: 0.01em;
-  transition:
-    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 0.35s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  background: #0c0d0f;
+  background: var(--snow);
+  color: var(--ink);
 }
 
-.btn-primary:active {
-  transform: translateY(1px);
-  background: #000;
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--snow);
 }
 
 .btn-primary:disabled {
   opacity: 0.55;
-  transform: none;
+  pointer-events: none;
 }
+
+.btn-sm {
+  padding: 0.6rem 1.05rem;
+  font-size: 0.875rem;
+}
+
 
 input,
 select,
@@ -149,9 +194,5 @@ textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  .nav-link::after {
-    transition: none;
   }
 }

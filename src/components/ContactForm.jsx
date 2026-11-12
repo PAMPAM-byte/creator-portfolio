@@ -80,7 +80,11 @@ export default function ContactForm() {
   const busy = status === "sending";
 
   return (
-    <form onSubmit={onSubmit} noValidate className="space-y-8">
+    <form
+      onSubmit={onSubmit}
+      noValidate
+      className="grid gap-x-8 gap-y-8 border border-line p-6 sm:grid-cols-2 sm:p-10"
+    >
       <div className="hidden" aria-hidden="true">
         <label htmlFor="company">Company</label>
         <input
@@ -138,23 +142,26 @@ export default function ContactForm() {
         id="message"
         label="Message"
         as="textarea"
+        placeholder="The brand, the platform, and what the video needs to do"
         error={errors.message}
         value={values.message}
         onChange={(value) => update("message", value)}
+        wide
       />
 
-      {note ? (
-        <p
-          role="status"
-          className={`text-sm ${status === "sent" ? "text-mark" : "text-mute"}`}
-        >
-          {note}
-        </p>
-      ) : null}
-
-      <button type="submit" disabled={busy} className="btn-primary">
-        {busy ? "Sending…" : "Send message"}
-      </button>
+      <div className="flex flex-col gap-4 sm:col-span-2 sm:flex-row sm:items-center sm:justify-between">
+        <button type="submit" disabled={busy} className="btn-primary">
+          {busy ? "Sending…" : "Send message"}
+        </button>
+        {note ? (
+          <p
+            role="status"
+            className={`text-sm ${status === "sent" ? "font-medium text-ink" : "text-mute"}`}
+          >
+            {note}
+          </p>
+        ) : null}
+      </div>
     </form>
   );
 }
@@ -170,25 +177,25 @@ function Field({
   placeholder,
   children,
   autoComplete,
+  wide = false,
 }) {
   const describedBy = error ? `${id}-error` : undefined;
   const classes =
-    "mt-3 w-full border-0 border-b bg-transparent py-3 text-[16px] text-ink outline-none transition-colors duration-300 placeholder:text-mute " +
-    (error
-      ? "border-ink"
-      : "border-line focus:border-ink");
+    "mt-2 w-full rounded-none border-0 border-b bg-transparent py-3 text-[16px] text-ink outline-none transition-colors duration-300 placeholder:text-mute/70 focus-visible:outline-none " +
+    (error ? "border-ink border-b-2" : "border-line focus:border-ink");
 
   return (
-    <div>
-      <label htmlFor={id} className="block text-sm text-mute">
+    <div className={wide ? "sm:col-span-2" : undefined}>
+      <label htmlFor={id} className="eyebrow block text-mute">
         {label}
       </label>
       {as === "textarea" ? (
         <textarea
           id={id}
           name={id}
-          rows={4}
+          rows={5}
           value={value}
+          placeholder={placeholder}
           onChange={(event) => onChange(event.target.value)}
           aria-invalid={Boolean(error)}
           aria-describedby={describedBy}
@@ -221,7 +228,7 @@ function Field({
         />
       )}
       {error ? (
-        <p id={`${id}-error`} className="mt-2 text-xs text-ink">
+        <p id={`${id}-error`} className="mt-2 text-sm font-medium text-ink">
           {error}
         </p>
       ) : null}

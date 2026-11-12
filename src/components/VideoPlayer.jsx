@@ -12,6 +12,7 @@ export default function VideoPlayer({
   posterAlt,
   className = "",
   autoPlayOnClick = true,
+  autoPlay = false,
 }) {
   const embed = getEmbed(url);
   const [playing, setPlaying] = useState(false);
@@ -42,12 +43,13 @@ export default function VideoPlayer({
 
   if (embed.type === "file") {
     return (
-      <div className={`relative overflow-hidden bg-ink ${className}`}>
+      <div className={`relative overflow-hidden bg-black ${className}`}>
         <video
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           controls
           playsInline
-          preload="none"
+          autoPlay={autoPlay}
+          preload={autoPlay ? "auto" : "none"}
           poster={poster}
           aria-label={title}
         >

@@ -7,22 +7,31 @@ export default function Process() {
     <section
       id="process"
       aria-labelledby="process-heading"
-      className="scroll-mt-28 px-6 py-16 sm:px-10 md:py-24 lg:px-16"
+      className="scroll-mt-20 px-5 py-16 sm:px-10 md:py-24 lg:px-16"
     >
-      <div className="mx-auto max-w-[1180px]">
+      <div className="mx-auto max-w-[1240px]">
         <SectionHeader
           id="process-heading"
           kicker="Process"
-          title="How I work"
+          meta={`${processSteps.length} stages`}
+          title="From brief to final export"
         />
-        <ol className="grid gap-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
+        <ol className="relative grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <span
+            aria-hidden="true"
+            className="absolute top-[5px] right-0 left-0 hidden h-px bg-ink lg:block"
+          />
           {processSteps.map((step, index) => (
             <Reveal key={step.title} delay={index * 0.07} as="li">
-              <article>
-                <p className="text-sm text-mute">
-                  {String(index + 1).padStart(2, "0")}
+              <article className="relative">
+                <span
+                  aria-hidden="true"
+                  className="relative block size-[11px] bg-ink"
+                />
+                <p className="eyebrow mt-6 text-mute">
+                  Stage {String(index + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-6 text-xl tracking-tight text-ink">
+                <h3 className="display mt-3 text-[1.9rem] leading-[0.95] text-ink">
                   {step.title}
                 </h3>
                 <p className="mt-4 text-[15px] leading-7 text-mute">

@@ -1,27 +1,48 @@
+/**
+ * Section opener: a black rule with a label and optional meta line
+ * (like a slate), then a title-card heading and optional lede.
+ */
 export default function SectionHeader({
   kicker,
+  meta,
   title,
   children,
   id,
-  className = "max-w-2xl",
-  ledeClassName = "max-w-xl",
-  marginClassName = "mb-12 md:mb-14",
+  as: Heading = "h2",
+  className = "",
+  tone = "light",
 }) {
+  const dark = tone === "dark";
   return (
-    <header className={`${marginClassName} ${className}`}>
-      {kicker ? (
-        <p className="mb-5 text-sm tracking-[0.16em] text-mute uppercase">
-          {kicker}
-        </p>
-      ) : null}
-      <h2
+    <header className={`mb-12 md:mb-16 ${className}`}>
+      <div
+        className={`flex items-baseline justify-between gap-6 border-t pt-4 ${
+          dark ? "border-snow" : "border-ink"
+        }`}
+      >
+        {kicker ? (
+          <p className={`eyebrow ${dark ? "text-snow" : "text-ink"}`}>{kicker}</p>
+        ) : null}
+        {meta ? (
+          <p className={`eyebrow ${dark ? "text-panel-mute" : "text-mute"}`}>
+            {meta}
+          </p>
+        ) : null}
+      </div>
+      <Heading
         id={id}
-        className="text-4xl font-medium leading-[1.12] tracking-tight text-ink md:text-5xl"
+        className={`display mt-8 max-w-4xl text-[clamp(2.6rem,6.5vw,5.25rem)] leading-[0.9] ${
+          dark ? "text-snow" : "text-ink"
+        }`}
       >
         {title}
-      </h2>
+      </Heading>
       {children ? (
-        <p className={`mt-6 text-lg leading-8 text-mute ${ledeClassName}`}>
+        <p
+          className={`mt-6 max-w-xl text-lg leading-8 ${
+            dark ? "text-panel-mute" : "text-mute"
+          }`}
+        >
           {children}
         </p>
       ) : null}
