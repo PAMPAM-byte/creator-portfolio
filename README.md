@@ -40,8 +40,8 @@ The homepage (`/`) is Hero, About, Selected work, Services, Skills, Process, and
 | Project | Route |
 | --- | --- |
 | DS Tech — AI Social-Media Advertising Video | `/work/ds-tech-ai-social-media-ad` |
-| Tech in 30 Seconds — Sass vs SCSS | `/work/tech-in-30-seconds-sass-vs-scss` |
 | The Bridge Transport, RCCG — Road-Safety Awareness Film | `/work/the-bridge-road-safety-awareness` |
+| Tech in 30 Seconds — Sass vs SCSS | `/work/tech-in-30-seconds-sass-vs-scss` |
 | Elora Medical Centre — AI UGC Healthcare Video | `/work/elora-medical-centre` |
 | Junqo — Product Motion Graphics | `/work/junqo-motion-graphics` |
 | Gala Sausage Roll — Social Media Brand Content | `/work/gala-sausage-roll` |

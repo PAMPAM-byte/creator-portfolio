@@ -48,30 +48,6 @@ export const projects = [
     isPlaceholder: false,
   },
   {
-    slug: "tech-in-30-seconds-sass-vs-scss",
-    title: "Tech in 30 Seconds — Sass vs SCSS",
-    category: "Short-form Educational / Tech Content",
-    categories: ["short-form"],
-    frame: "square",
-    thumbnail: "/images/projects/tech-tutorial.jpg",
-    thumbnailAlt:
-      "A presenter in glasses and a red top explaining CSS, with an on-screen caption",
-    tools: ["CapCut"],
-    summary:
-      "A short-form tech video explaining Sass and SCSS. Background music, sound effects, captions, and transitions keep the edit engaging, easy to follow, and visually interesting while maintaining a clean educational style.",
-    facts: [
-      { label: "Project Type", value: "Short-form Educational / Tech Content" },
-      { label: "Editing Software", value: "CapCut" },
-      {
-        label: "Editing Elements",
-        value: "Background music, sound effects, captions, transitions",
-      },
-    ],
-    videoUrl:
-      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1791993299/tech_tutorial_qdrzmv.mp4",
-    isPlaceholder: false,
-  },
-  {
     slug: "the-bridge-road-safety-awareness",
     title: "The Bridge Transport, RCCG — Road-Safety Awareness Film",
     category: "AI Videos · Public Awareness",
@@ -94,6 +70,30 @@ export const projects = [
     ],
     videoUrl:
       "https://res.cloudinary.com/df0ftmvsr/video/upload/v1791254411/Road_Safety_Awareness_ir4drh.mp4",
+    isPlaceholder: false,
+  },
+  {
+    slug: "tech-in-30-seconds-sass-vs-scss",
+    title: "Tech in 30 Seconds — Sass vs SCSS",
+    category: "Short-form Educational / Tech Content",
+    categories: ["short-form"],
+    frame: "square",
+    thumbnail: "/images/projects/tech-tutorial.jpg",
+    thumbnailAlt:
+      "A presenter in glasses and a red top explaining CSS, with an on-screen caption",
+    tools: ["CapCut"],
+    summary:
+      "A short-form tech video explaining Sass and SCSS. Background music, sound effects, captions, and transitions keep the edit engaging, easy to follow, and visually interesting while maintaining a clean educational style.",
+    facts: [
+      { label: "Project Type", value: "Short-form Educational / Tech Content" },
+      { label: "Editing Software", value: "CapCut" },
+      {
+        label: "Editing Elements",
+        value: "Background music, sound effects, captions, transitions",
+      },
+    ],
+    videoUrl:
+      "https://res.cloudinary.com/df0ftmvsr/video/upload/v1791993299/tech_tutorial_qdrzmv.mp4",
     isPlaceholder: false,
   },
   {
